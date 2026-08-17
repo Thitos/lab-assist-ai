@@ -199,7 +199,7 @@ print(
 )
 
 # Save results
-output_path = "evaluation/retriever_results_clean.json"
+output_path = "evaluation/retriever_results.json"
 
 output_data = {
     "retrieval_k": RETRIEVAL_K,
