@@ -1,0 +1,537 @@
+{
+  "retrieval_k": 4,
+  "answerable_questions": 23,
+  "not_answerable_questions": 3,
+  "rank_1": 18,
+  "top_k": 23,
+  "miss": 0,
+  "rank_1_percentage": 78.26,
+  "top_k_percentage": 100.0,
+  "miss_percentage": 0.0,
+  "results": [
+    {
+      "id": 1,
+      "area": "onboarding",
+      "question": "Quem é responsável pelo laboratório?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf"
+      ],
+      "matched_source": "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf",
+      "rank": 4,
+      "found_in_top_k": true,
+      "score": 0.5413709878921509,
+      "status": "top_k",
+      "retrieved_sources": [
+        "ORG-LAB-001_Organograma_Laboratorio.pdf",
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf",
+        "ORG-LAB-001_Organograma_Laboratorio.pdf",
+        "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf"
+      ]
+    },
+    {
+      "id": 2,
+      "area": "onboarding",
+      "question": "Onde encontro os contatos de emergência?",
+      "answerable": true,
+      "expected_sources": [
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf",
+        "CTO-LAB-001_Lista_De_Contatos_Funcionarios.md",
+        "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf"
+      ],
+      "matched_source": "CTO-LAB-001_Lista_De_Contatos_Funcionarios.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.5310328006744385,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "CTO-LAB-001_Lista_De_Contatos_Funcionarios.md",
+        "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf",
+        "CTO-LAB-001_Lista_De_Contatos_Funcionarios.md",
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf"
+      ]
+    },
+    {
+      "id": 3,
+      "area": "onboarding",
+      "question": "Como registrar uma amostra?",
+      "answerable": true,
+      "expected_sources": [
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf",
+        "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf"
+      ],
+      "matched_source": "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.503844678401947,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf",
+        "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf",
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf",
+        "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf"
+      ]
+    },
+    {
+      "id": 4,
+      "area": "onboarding",
+      "question": "Qual o fluxo da rotina de execução de pesquisas do laboratório?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf"
+      ],
+      "matched_source": "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.4692416489124298,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf",
+        "POP-ADM-001_Como_Solicitar_Reagentes_E_Equipamentos.md",
+        "ORG-LAB-001_Organograma_Laboratorio.pdf",
+        "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md"
+      ]
+    },
+    {
+      "id": 5,
+      "area": "biosafety",
+      "question": "Quais EPIs são obrigatórios?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf"
+      ],
+      "matched_source": "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.4784051775932312,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+        "MAN-BIO-001_Manual_Biossegurança.pdf",
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ]
+    },
+    {
+      "id": 6,
+      "area": "biosafety",
+      "question": "O que fazer em caso de derramamento?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-BIO-001_Manual_Biossegurança.pdf",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "POP-BIO-001_Descontaminacao_E_Sanitizacao_Areas_Trabalho.md"
+      ],
+      "matched_source": "POP-BIO-001_Descontaminacao_E_Sanitizacao_Areas_Trabalho.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.4938543438911438,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "POP-BIO-001_Descontaminacao_E_Sanitizacao_Areas_Trabalho.md",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "MAN-BIO-001_Manual_Biossegurança.pdf",
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf"
+      ]
+    },
+    {
+      "id": 7,
+      "area": "biosafety",
+      "question": "Qual EPI devo usar na sala NB2?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf"
+      ],
+      "matched_source": "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.4266546368598938,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md"
+      ]
+    },
+    {
+      "id": 8,
+      "area": "biosafety",
+      "question": "Qual pesquisa posso fazer em laboratório NB1?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "MAN-BIO-001_Manual_Biossegurança.pdf"
+      ],
+      "matched_source": "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.527357280254364,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf"
+      ]
+    },
+    {
+      "id": 9,
+      "area": "biosafety",
+      "question": "Qual o plano de emergência do laboratório?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-BIO-001_Manual_Biossegurança.pdf"
+      ],
+      "matched_source": "MAN-BIO-001_Manual_Biossegurança.pdf",
+      "rank": 3,
+      "found_in_top_k": true,
+      "score": 0.4977412223815918,
+      "status": "top_k",
+      "retrieved_sources": [
+        "CTO-LAB-001_Lista_De_Contatos_Funcionarios.md",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "MAN-BIO-001_Manual_Biossegurança.pdf",
+        "POP-BIO-001_Descontaminacao_E_Sanitizacao_Areas_Trabalho.md"
+      ]
+    },
+    {
+      "id": 10,
+      "area": "protocols",
+      "question": "Qual o índice de pureza ideal para RNA após a extração?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ],
+      "matched_source": "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.41475939750671387,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+        "POP-GEN-002_Protocolo_Extracao_DNA_Controle_Qualidade.md",
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ]
+    },
+    {
+      "id": 11,
+      "area": "protocols",
+      "question": "Quais reagentes são utilizados para as bibliotecas de NGS?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-SEQ-001_Preparo_Amostras_RNA_Bibliotecas_NGS.md"
+      ],
+      "matched_source": "POP-SEQ-001_Preparo_Amostras_RNA_Bibliotecas_NGS.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.43153074383735657,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "POP-SEQ-001_Preparo_Amostras_RNA_Bibliotecas_NGS.md",
+        "POP-SEQ-001_Preparo_Amostras_RNA_Bibliotecas_NGS.md",
+        "LST-ADM-002_Lista_Estoque_Reagentes_Por_Laboratorio.md",
+        "POP-SEQ-001_Preparo_Amostras_RNA_Bibliotecas_NGS.md"
+      ]
+    },
+    {
+      "id": 12,
+      "area": "protocols",
+      "question": "Qual o nome do protocolo para fazer PCR?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-GEN-003_Protocolo_Amplificacao_Quantificacao_qPCR.md"
+      ],
+      "matched_source": "POP-GEN-003_Protocolo_Amplificacao_Quantificacao_qPCR.md",
+      "rank": 2,
+      "found_in_top_k": true,
+      "score": 0.5514223575592041,
+      "status": "top_k",
+      "retrieved_sources": [
+        "MAN-EQP-003_Manual_Operacao_Manutencao_Termociclador.pdf",
+        "POP-GEN-003_Protocolo_Amplificacao_Quantificacao_qPCR.md",
+        "POP-GEN-003_Protocolo_Amplificacao_Quantificacao_qPCR.md",
+        "POP-SEQ-002_Preparo_Amostras_Solo_Metagenomica.md"
+      ]
+    },
+    {
+      "id": 13,
+      "area": "protocols",
+      "question": "Posso armazenar RNA no freezer -20 °C?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ],
+      "matched_source": "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+      "rank": 2,
+      "found_in_top_k": true,
+      "score": 0.5278338193893433,
+      "status": "top_k",
+      "retrieved_sources": [
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf",
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+        "LST-ADM-002_Lista_Estoque_Reagentes_Por_Laboratorio.md",
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ]
+    },
+    {
+      "id": 14,
+      "area": "protocols",
+      "question": "Como pesar amostras de solo?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-SEQ-002_Preparo_Amostras_Solo_Metagenomica.md"
+      ],
+      "matched_source": "POP-SEQ-002_Preparo_Amostras_Solo_Metagenomica.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.5781692266464233,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "POP-SEQ-002_Preparo_Amostras_Solo_Metagenomica.md",
+        "POP-SEQ-002_Preparo_Amostras_Solo_Metagenomica.md",
+        "POP-SEQ-002_Preparo_Amostras_Solo_Metagenomica.md",
+        "POP-SEQ-002_Preparo_Amostras_Solo_Metagenomica.md"
+      ]
+    },
+    {
+      "id": 15,
+      "area": "protocols",
+      "question": "Devo usar nitrogênio líquido para extrair RNA ou apenas gelo?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ],
+      "matched_source": "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.527187705039978,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+        "POP-GEN-002_Protocolo_Extracao_DNA_Controle_Qualidade.md"
+      ]
+    },
+    {
+      "id": 16,
+      "area": "equipment",
+      "question": "Qual a configuração das taxas de rampa do termociclador para protocolos padrão?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-EQP-003_Manual_Operacao_Manutencao_Termociclador.pdf"
+      ],
+      "matched_source": "MAN-EQP-003_Manual_Operacao_Manutencao_Termociclador.pdf",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.44254451990127563,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "MAN-EQP-003_Manual_Operacao_Manutencao_Termociclador.pdf",
+        "MAN-EQP-003_Manual_Operacao_Manutencao_Termociclador.pdf",
+        "POP-GEN-003_Protocolo_Amplificacao_Quantificacao_qPCR.md",
+        "MAN-EQP-003_Manual_Operacao_Manutencao_Termociclador.pdf"
+      ]
+    },
+    {
+      "id": 17,
+      "area": "equipment",
+      "question": "Como efetuar a limpeza do Nanodrop?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-EQP-002_Manual_Operacao_Manutencao_Nanodrop.pdf"
+      ],
+      "matched_source": "MAN-EQP-002_Manual_Operacao_Manutencao_Nanodrop.pdf",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.3927140235900879,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "MAN-EQP-002_Manual_Operacao_Manutencao_Nanodrop.pdf",
+        "MAN-EQP-002_Manual_Operacao_Manutencao_Nanodrop.pdf",
+        "MAN-EQP-002_Manual_Operacao_Manutencao_Nanodrop.pdf",
+        "MAN-EQP-002_Manual_Operacao_Manutencao_Nanodrop.pdf"
+      ]
+    },
+    {
+      "id": 18,
+      "area": "equipment",
+      "question": "Qual o checklist de calibração do sequenciador?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-EQP-005_Manual_Operacao_Manutencao_Sequenciador_NGS.pdf"
+      ],
+      "matched_source": "MAN-EQP-005_Manual_Operacao_Manutencao_Sequenciador_NGS.pdf",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.41635844111442566,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "MAN-EQP-005_Manual_Operacao_Manutencao_Sequenciador_NGS.pdf",
+        "MAN-EQP-005_Manual_Operacao_Manutencao_Sequenciador_NGS.pdf",
+        "MAN-EQP-005_Manual_Operacao_Manutencao_Sequenciador_NGS.pdf",
+        "MAN-EQP-005_Manual_Operacao_Manutencao_Sequenciador_NGS.pdf"
+      ]
+    },
+    {
+      "id": 19,
+      "area": "equipment",
+      "question": "Quem devo informar sobre problema na centrífuga?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-EQP-001_Manual_Operacao_Manutencao_MicroCentrifuga.pdf",
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf"
+      ],
+      "matched_source": "MAN-EQP-001_Manual_Operacao_Manutencao_MicroCentrifuga.pdf",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.4923322796821594,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "MAN-EQP-001_Manual_Operacao_Manutencao_MicroCentrifuga.pdf",
+        "MAN-EQP-001_Manual_Operacao_Manutencao_MicroCentrifuga.pdf",
+        "MAN-EQP-001_Manual_Operacao_Manutencao_MicroCentrifuga.pdf",
+        "MAN-EQP-001_Manual_Operacao_Manutencao_MicroCentrifuga.pdf"
+      ]
+    },
+    {
+      "id": 20,
+      "area": "administrative",
+      "question": "Quem aprova uma compra?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-ADM-001_Como_Solicitar_Reagentes_E_Equipamentos.md",
+        "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md"
+      ],
+      "matched_source": "POP-ADM-001_Como_Solicitar_Reagentes_E_Equipamentos.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.5113425254821777,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "POP-ADM-001_Como_Solicitar_Reagentes_E_Equipamentos.md",
+        "POP-ADM-001_Como_Solicitar_Reagentes_E_Equipamentos.md",
+        "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md",
+        "POP-ADM-001_Como_Solicitar_Reagentes_E_Equipamentos.md"
+      ]
+    },
+    {
+      "id": 21,
+      "area": "administrative",
+      "question": "Tenho no estoque todos os reagentes para extrair RNA?",
+      "answerable": true,
+      "expected_sources": [
+        "LST-ADM-002_Lista_Estoque_Reagentes_Por_Laboratorio.md"
+      ],
+      "matched_source": "LST-ADM-002_Lista_Estoque_Reagentes_Por_Laboratorio.md",
+      "rank": 2,
+      "found_in_top_k": true,
+      "score": 0.4318947196006775,
+      "status": "top_k",
+      "retrieved_sources": [
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md",
+        "LST-ADM-002_Lista_Estoque_Reagentes_Por_Laboratorio.md",
+        "LST-ADM-002_Lista_Estoque_Reagentes_Por_Laboratorio.md",
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ]
+    },
+    {
+      "id": 22,
+      "area": "administrative",
+      "question": "Os fornecedores são verificados ou avaliados?",
+      "answerable": true,
+      "expected_sources": [
+        "LST-ADM-003_Lista_De_Fornecedores_Homologados.md"
+      ],
+      "matched_source": "LST-ADM-003_Lista_De_Fornecedores_Homologados.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.5126180648803711,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "LST-ADM-003_Lista_De_Fornecedores_Homologados.md",
+        "LST-ADM-003_Lista_De_Fornecedores_Homologados.md",
+        "LST-ADM-003_Lista_De_Fornecedores_Homologados.md",
+        "LST-ADM-003_Lista_De_Fornecedores_Homologados.md"
+      ]
+    },
+    {
+      "id": 23,
+      "area": "administrative",
+      "question": "Qual o procedimento para validação de insumos críticos?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md"
+      ],
+      "matched_source": "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md",
+      "rank": 1,
+      "found_in_top_k": true,
+      "score": 0.4993872046470642,
+      "status": "rank_1",
+      "retrieved_sources": [
+        "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md",
+        "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md",
+        "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf",
+        "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md"
+      ]
+    },
+    {
+      "id": 24,
+      "area": "out",
+      "question": "Quem ganhou a copa do mundo em 2022?",
+      "answerable": false,
+      "expected_sources": [],
+      "matched_source": null,
+      "rank": null,
+      "found_in_top_k": false,
+      "score": null,
+      "status": "not_answerable",
+      "retrieved_sources": [
+        "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf",
+        "MAN-EQP-001_Manual_Operacao_Manutencao_MicroCentrifuga.pdf",
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf",
+        "ORG-LAB-001_Organograma_Laboratorio.pdf"
+      ]
+    },
+    {
+      "id": 25,
+      "area": "out",
+      "question": "Qual a melhor forma de usar protetor solar?",
+      "answerable": false,
+      "expected_sources": [],
+      "matched_source": null,
+      "rank": null,
+      "found_in_top_k": false,
+      "score": null,
+      "status": "not_answerable",
+      "retrieved_sources": [
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+        "MAN-BIO-001_Manual_Biossegurança.pdf",
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf"
+      ]
+    },
+    {
+      "id": 26,
+      "area": "out",
+      "question": "Qual o IDH do Brasil?",
+      "answerable": false,
+      "expected_sources": [],
+      "matched_source": null,
+      "rank": null,
+      "found_in_top_k": false,
+      "score": null,
+      "status": "not_answerable",
+      "retrieved_sources": [
+        "LST-ADM-003_Lista_De_Fornecedores_Homologados.md",
+        "LST-ADM-003_Lista_De_Fornecedores_Homologados.md",
+        "LST-ADM-001_Lista_De_Equipamentos_Laboratorios.md",
+        "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf"
+      ]
+    }
+  ]
+}

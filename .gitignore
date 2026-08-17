@@ -1,12 +1,10 @@
-# UV
+# Python
 __pycache__/
+*.py[cod]
 
-# Environments
+# Environment
 .env
 .venv/
-sketch/
-evaluation/
-vector_store/
-tmp_chunk_test/
-tmp_vector_store_test/
 
+# Development / experiments
+sketch/

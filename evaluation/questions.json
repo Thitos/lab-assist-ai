@@ -1,0 +1,242 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "area": "onboarding",
+      "question": "Quem é responsável pelo laboratório?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf"
+      ]
+    },
+    {
+      "id": 2,
+      "area": "onboarding",
+      "question": "Onde encontro os contatos de emergência?",
+      "answerable": true,
+      "expected_sources": [
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf",
+        "CTO-LAB-001_Lista_De_Contatos_Funcionarios.md",
+        "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf"
+      ]
+    },
+    {
+      "id": 3,
+      "area": "onboarding",
+      "question": "Como registrar uma amostra?",
+      "answerable": true,
+      "expected_sources": [
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf",
+        "MAN-LAB-002_Manual_Usuario_Sistema_LIMS_ELN.pdf"
+      ]
+    },
+    {
+      "id": 4,
+      "area": "onboarding",
+      "question": "Qual o fluxo da rotina de execução de pesquisas do laboratório?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf"
+      ]
+    },
+    {
+      "id": 5,
+      "area": "biosafety",
+      "question": "Quais EPIs são obrigatórios?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf"
+      ]
+    },
+    {
+      "id": 6,
+      "area": "biosafety",
+      "question": "O que fazer em caso de derramamento?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-BIO-001_Manual_Biossegurança.pdf",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "POP-BIO-001_Descontaminacao_E_Sanitizacao_Areas_Trabalho.md"
+      ]
+    },
+    {
+      "id": 7,
+      "area": "biosafety",
+      "question": "Qual EPI devo usar na sala NB2?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-BIO-002_Uso_Correto_EPI_EPC.md",
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf"
+      ]
+    },
+    {
+      "id": 8,
+      "area": "biosafety",
+      "question": "Qual pesquisa posso fazer em laboratório NB1?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-BIO-002_Normas_De_Biosseguranca_NB1_NB2.pdf",
+        "MAN-BIO-001_Manual_Biossegurança.pdf"
+      ]
+    },
+    {
+      "id": 9,
+      "area": "biosafety",
+      "question": "Qual o plano de emergência do laboratório?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-BIO-001_Manual_Biossegurança.pdf"
+      ]
+    },
+    {
+      "id": 10,
+      "area": "protocols",
+      "question": "Qual o índice de pureza ideal para RNA após a extração?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ]
+    },
+    {
+      "id": 11,
+      "area": "protocols",
+      "question": "Quais reagentes são utilizados para as bibliotecas de NGS?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-SEQ-001_Preparo_Amostras_RNA_Bibliotecas_NGS.md"
+      ]
+    },
+    {
+      "id": 12,
+      "area": "protocols",
+      "question": "Qual o nome do protocolo para fazer PCR?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-GEN-003_Protocolo_Amplificacao_Quantificacao_qPCR.md"
+      ]
+    },
+    {
+      "id": 13,
+      "area": "protocols",
+      "question": "Posso armazenar RNA no freezer -20 °C?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ]
+    },
+    {
+      "id": 14,
+      "area": "protocols",
+      "question": "Como pesar amostras de solo?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-SEQ-002_Preparo_Amostras_Solo_Metagenomica.md"
+      ]
+    },
+    {
+      "id": 15,
+      "area": "protocols",
+      "question": "Devo usar nitrogênio líquido para extrair RNA ou apenas gelo?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md"
+      ]
+    },
+    {
+      "id": 16,
+      "area": "equipment",
+      "question": "Qual a configuração das taxas de rampa do termociclador para protocolos padrão?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-EQP-003_Manual_Operacao_Manutencao_Termociclador.pdf"
+      ]
+    },
+    {
+      "id": 17,
+      "area": "equipment",
+      "question": "Como efetuar a limpeza do Nanodrop?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-EQP-002_Manual_Operacao_Manutencao_Nanodrop.pdf"
+      ]
+    },
+    {
+      "id": 18,
+      "area": "equipment",
+      "question": "Qual o checklist de calibração do sequenciador?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-EQP-005_Manual_Operacao_Manutencao_Sequenciador_NGS.pdf"
+      ]
+    },
+    {
+      "id": 19,
+      "area": "equipment",
+      "question": "Quem devo informar sobre problema na centrífuga?",
+      "answerable": true,
+      "expected_sources": [
+        "MAN-EQP-001_Manual_Operacao_Manutencao_MicroCentrifuga.pdf",
+        "FAQ-LAB-001_FAQ_Laboratorio.pdf"
+      ]
+    },
+    {
+      "id": 20,
+      "area": "administrative",
+      "question": "Quem aprova uma compra?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-ADM-001_Como_Solicitar_Reagentes_E_Equipamentos.md",
+        "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md"
+      ]
+    },
+    {
+      "id": 21,
+      "area": "administrative",
+      "question": "Tenho no estoque todos os reagentes para extrair RNA?",
+      "answerable": true,
+      "expected_sources": [
+        "LST-ADM-002_Lista_Estoque_Reagentes_Por_Laboratorio.md"
+      ]
+    },
+    {
+      "id": 22,
+      "area": "administrative",
+      "question": "Os fornecedores são verificados ou avaliados?",
+      "answerable": true,
+      "expected_sources": [
+        "LST-ADM-003_Lista_De_Fornecedores_Homologados.md"
+      ]
+    },
+    {
+      "id": 23,
+      "area": "administrative",
+      "question": "Qual o procedimento para validação de insumos críticos?",
+      "answerable": true,
+      "expected_sources": [
+        "POP-ADM-003_Aquisição_Recebimento_Validação_Insumos_Criticos.md"
+      ]
+    },
+    {
+      "id": 24,
+      "area": "out",
+      "question": "Quem ganhou a copa do mundo em 2022?",
+      "answerable": false,
+      "expected_sources": []
+    },
+    {
+      "id": 25,
+      "area": "out",
+      "question": "Qual a melhor forma de usar protetor solar?",
+      "answerable": false,
+      "expected_sources": []
+    },
+    {
+      "id": 26,
+      "area": "out",
+      "question": "Qual o IDH do Brasil?",
+      "answerable": false,
+      "expected_sources": []
+    }
+  ]
+}

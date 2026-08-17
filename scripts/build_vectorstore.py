@@ -6,7 +6,6 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import (
     DirectoryLoader,
     PyPDFLoader,
-    Docx2txtLoader,
     TextLoader,
 )
 
@@ -25,12 +24,11 @@ if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY has not been configured.")
 
 def load_documents():
-    """Loads PDF, DOCX, and Markdown documents from the knowledge base."""
+    """Loads PDF, and Markdown documents from the knowledge base."""
     documents = []
 
     loaders = [
         ("**/*.pdf", PyPDFLoader),
-        ("**/*.docx", Docx2txtLoader),
         ("**/*.md", TextLoader),
     ]
 
