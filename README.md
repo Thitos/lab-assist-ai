@@ -195,7 +195,7 @@ Com `RETRIEVAL_K = 4`, os resultados obtidos foram:
 | Métrica | Resultado |
 |---|---:|
 | Perguntas respondíveis | 23 |
-| Perguntas fora do domínio | 3 |
+| Perguntas não respondíveis | 3 |
 | Rank@1 | 18/23 (78,3%) |
 | Top-K | 23/23 (100%) |
 | Misses de retrieval | 0/23 (0%) |
@@ -234,6 +234,7 @@ Essa organização representa diferentes áreas de conhecimento normalmente enco
 **Pergunta:**
 
 > Tenho no estoque todos os reagentes para extrair RNA?
+
 **Resposta:**
 
 O LabAssistAI consulta o protocolo de extração de RNA para identificar os reagentes necessários e verifica sua disponibilidade na lista de estoque. A partir dessas informações, o sistema identifica quais reagentes necessários estão disponíveis e quais não constam no estoque.
@@ -315,6 +316,8 @@ lab-assist-ai/
 │   └── questions.json
 ├── knowledge_base/
 ├── vector_store/
+├── docs/
+│   └── evidence/
 ├── README.md
 ├── pyproject.toml
 ├── uv.lock
@@ -420,9 +423,11 @@ SIMILARITY_THRESHOLD
 TEMPERATURE
 ```
 
-A chave da API deve permanecer exclusivamente no arquivo `.env`.
+A chave da API não deve ser armazenada no código-fonte ou versionada no Git.
 
-O arquivo `.env` não deve ser versionado.
+No ambiente local, a credencial é configurada por meio do arquivo `.env`.
+
+No deployment, a credencial é configurada utilizando o mecanismo de secrets do Streamlit Community Cloud.
 
 ---
 
@@ -472,22 +477,50 @@ O deployment da aplicação foi realizado utilizando **Streamlit Community Cloud
 Arquitetura de deployment:
 
 ```text
-GitHub
-   │
-   ▼
+GitHub Repository
+       │
+       ▼
 Streamlit Community Cloud
-   │
-   ├── Python environment
-   ├── Application dependencies
-   ├── Application secrets
-   ├── Knowledge Base
-   ├── FAISS Vector Store
-   └── Streamlit
+       │
+       ├── Python environment
+       ├── Application dependencies
+       ├── Application secrets
+       ├── Knowledge Base
+       ├── FAISS Vector Store
+       └── Streamlit
 ```
 
 No ambiente local, a chave da API é configurada por meio do arquivo `.env`. No deployment, a credencial deve ser configurada utilizando o mecanismo de secrets da plataforma.
 
-### Evidências do deployment
+### Evidências de execução
+
+A aplicação foi executada em ambiente de produção por meio do Streamlit Community Cloud.
+
+As evidências abaixo registram a execução do agente, incluindo o carregamento da interface, o processamento das consultas, as respostas geradas e as fontes documentais recuperadas.
+
+#### Interface inicial
+
+![Interface inicial](docs/evidence/evidence-01-interface.png)
+
+#### Execução da consulta
+
+![Execução da consulta](docs/evidence/evidence-02-execution.png)
+
+#### Consulta sobre o responsável pelo laboratório
+
+![Consulta sobre o responsável pelo laboratório](docs/evidence/evidence-03-lab-responsible.png)
+
+#### Consulta sobre disponibilidade de reagentes
+
+![Consulta sobre disponibilidade de reagentes](docs/evidence/evidence-04-reagent-stock.png)
+
+#### Consulta sobre configurações do termociclador
+
+![Consulta sobre configurações do termociclador](docs/evidence/evidence-05-qpcr-thermocycler.png)
+
+### Vídeo da execução
+
+[🎥 Evidência 06 — execução e tratamento de pergunta fora do escopo](docs/evidence/evidence-06-out-of-scope.mp4)
 
 ---
 
@@ -495,13 +528,15 @@ No ambiente local, a chave da API é configurada por meio do arquivo `.env`. No 
 
 A chave da API do Gemini não deve ser armazenada no código-fonte ou no GitHub.
 
-O projeto utiliza:
+No ambiente local, o projeto utiliza:
 
 ```text
 .env
 .env.example
 .gitignore
 ```
+
+No deployment, a credencial é armazenada utilizando o mecanismo de secrets da plataforma.
 
 O arquivo `.env.example` contém apenas a estrutura das variáveis necessárias, sem credenciais reais.
 
