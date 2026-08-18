@@ -10,6 +10,14 @@ O BioLab Research Center, seus funcionários e todos os documentos presentes na 
 
 ---
 
+## Demo
+
+**Aplicação:** [LabAssistAI](https://lab-assist-ai.streamlit.app/)
+
+**Código-fonte:** [GitHub](https://github.com/Thitos/lab-assist-ai)
+
+---
+
 ## Problema
 
 Laboratórios de pesquisa acumulam conhecimento em diferentes tipos de documentos, como:
@@ -55,28 +63,29 @@ Quando os documentos recuperados não atingem o `SIMILARITY_THRESHOLD` definido,
                        ▼
                  RAG Pipeline
                        │
-             ┌─────────┴─────────┐
-             │                   │
-             ▼                   ▼
-       Gemini Embeddings       FAISS
-             │                   │
-             └─────────┬─────────┘
+                       ▼
+              Gemini Embeddings
                        │
                        ▼
-                  Documentos
-                 recuperados
+                 Vetor da pergunta
                        │
                        ▼
-                 Contexto RAG
+               FAISS Vector Store
                        │
                        ▼
-                Gemini LLM
+                Chunks relevantes
+                       │
+                       ▼
+                  Contexto RAG
+                       │
+                       ▼
+                  Gemini LLM
                        │
                        ▼
                     Resposta
                        │
                        ▼
-               Fontes consultadas
+              Fontes consultadas
 ````
 
 ### Pipeline de ingestão
@@ -84,19 +93,22 @@ Quando os documentos recuperados não atingem o `SIMILARITY_THRESHOLD` definido,
 Os documentos da base de conhecimento são processados antes da consulta:
 
 ```text
-Documentos
-    │
-    ▼
-Loaders
-    │
-    ▼
-Chunking
-    │
-    ▼
+    Documentos
+        │
+        ▼
+    Loaders
+        │
+        ▼
+    Chunking
+        │
+        ▼
 Gemini Embeddings
-    │
-    ▼
-FAISS
+        │
+        ▼
+    Vetores
+        │
+        ▼
+FAISS Vector Store
 ```
 
 ### Pipeline de consulta
@@ -105,25 +117,28 @@ FAISS
 Pergunta do usuário
         │
         ▼
-     Embedding
+Gemini Embeddings
         │
         ▼
-  Busca no FAISS
+Vetor da pergunta
         │
         ▼
-Documentos relevantes
+FAISS Vector Store
         │
         ▼
-      Prompt
+Chunks relevantes
+        │
+        ▼
+   Contexto RAG
         │
         ▼
     Gemini LLM
         │
         ▼
-     Resposta
+    Resposta
         │
         ▼
-     Fontes
+Fontes consultadas
 ```
 
 ---
@@ -139,7 +154,7 @@ Documentos relevantes
 - **PyPDF**
 - **python-dotenv**
 - **uv** para gerenciamento do ambiente e dependências
-- **Streamlit Cloud** para deployment
+- **Streamlit Community Cloud** para deployment
 
 A base documental atual utiliza arquivos:
 
@@ -180,10 +195,10 @@ Com `RETRIEVAL_K = 4`, os resultados obtidos foram:
 | Métrica | Resultado |
 |---|---:|
 | Perguntas respondíveis | 23 |
-| Perguntas não respondíveis | 3 |
+| Perguntas fora do domínio | 3 |
 | Rank@1 | 18/23 (78,3%) |
 | Top-K | 23/23 (100%) |
-| Miss | 0/23 (0%) |
+| Misses de retrieval | 0/23 (0%) |
 
 ### Similarity threshold
 
@@ -214,6 +229,22 @@ Essa organização representa diferentes áreas de conhecimento normalmente enco
 
 ## Exemplos de perguntas
 
+### Pergunta sobre disponibilidade de reagentes
+
+**Pergunta:**
+
+> Tenho no estoque todos os reagentes para extrair RNA?
+**Resposta:**
+
+O LabAssistAI consulta o protocolo de extração de RNA para identificar os reagentes necessários e verifica sua disponibilidade na lista de estoque. A partir dessas informações, o sistema identifica quais reagentes necessários estão disponíveis e quais não constam no estoque.
+
+**Fontes consultadas:**
+
+- POP-RNA-001_Protocolo_Extracao_RNA_Total_TRIzol.md
+- LST-ADM-002_Lista_Estoque_Reagentes_Por_Laboratorio.md
+
+---
+
 ### Pergunta sobre documentação institucional
 
 **Pergunta:**
@@ -222,13 +253,13 @@ Essa organização representa diferentes áreas de conhecimento normalmente enco
 
 **Resposta:**
 
-O LabAssistAI consulta a documentação institucional e apresenta as funções e responsabilidades identificadas nos documentos recuperados.
+O sistema consulta a documentação institucional e apresenta as funções e responsabilidades identificadas nos documentos recuperados.
 
 **Fontes consultadas:**
 
-* ORG-LAB-001_Organograma_Laboratorio.pdf
-* FAQ-LAB-001_FAQ_Laboratorio.pdf
-* MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf
+- ORG-LAB-001_Organograma_Laboratorio.pdf
+- FAQ-LAB-001_FAQ_Laboratorio.pdf
+- MAN-LAB-001_Manual_Boas_Praticas_Laboratorio.pdf
 
 ---
 
@@ -244,7 +275,7 @@ O sistema recupera o protocolo de amplificação e quantificação qPCR e aprese
 
 **Fonte consultada:**
 
-* POP-GEN-003_Protocolo_Amplificacao_Quantificacao_qPCR.md
+- POP-GEN-003_Protocolo_Amplificacao_Quantificacao_qPCR.md
 
 ---
 
@@ -333,16 +364,16 @@ O índice FAISS é versionado no repositório para permitir que a aplicação se
 
 ### Pré-requisitos
 
-* Python 3.13 ou superior;
-* Uma API Key do Google Gemini;
-* `uv` instalado.
+- Python 3.13;
+- Uma API Key do Google Gemini;
+- `uv` instalado.
 
 ### Instalação com uv
 
 Clone o repositório e entre no diretório do projeto:
 
 ```bash
-git clone <REPOSITORY_URL>
+git clone https://github.com/Thitos/lab-assist-ai.git
 cd lab-assist-ai
 ```
 
@@ -366,7 +397,7 @@ uv sync
 
 ### Instalação alternativa com pip
 
-Se vc não utiliza `uv`, instale as dependências:
+Se você não utiliza `uv`, instale as dependências:
 
 ```bash
 pip install -r requirements.txt
@@ -407,7 +438,7 @@ A aplicação será disponibilizada pelo Streamlit para acesso através do naveg
 
 ### Execução alternativa com pip
 
-Se você instalou as dependências do projeto com pip. Inicie a aplicação com:
+Se você instalou as dependências do projeto com `pip`, inicie a aplicação com:
 
 ```bash
 streamlit run main.py
@@ -436,15 +467,15 @@ Essas limitações fazem parte do escopo da versão demonstrativa do projeto.
 
 ## Deploy
 
-O deployment da aplicação será realizado utilizando **Streamlit Cloud**.
+O deployment da aplicação foi realizado utilizando **Streamlit Community Cloud**.
 
-Arquitetura prevista:
+Arquitetura de deployment:
 
 ```text
 GitHub
    │
    ▼
-Streamlit Cloud
+Streamlit Community Cloud
    │
    ├── Python environment
    ├── Application dependencies
@@ -457,11 +488,6 @@ Streamlit Cloud
 No ambiente local, a chave da API é configurada por meio do arquivo `.env`. No deployment, a credencial deve ser configurada utilizando o mecanismo de secrets da plataforma.
 
 ### Evidências do deployment
-
-Os vídeos demonstrando a execução e o deployment da aplicação serão adicionados nesta seção após a conclusão do deployment.
-
-* [Vídeo — Aplicação funcionando](#)
-* [Vídeo — Deployment na Streamlit Cloud](#)
 
 ---
 

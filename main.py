@@ -5,9 +5,50 @@ from rag.pipeline import ask_question
 st.set_page_config(
     page_title="LabAssistAI",
     page_icon="🧪",
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
 
-st.title("LabAssistAI")
+# Sidebar
+with st.sidebar:
+
+    st.markdown("## 🧪 LabAssistAI")
+
+    st.caption(
+        "Assistente inteligente para laboratórios de pesquisa"
+    )
+
+    st.divider()
+
+    st.markdown("### Sobre")
+
+    st.write(
+        "Consulte protocolos, equipamentos, estoque e "
+        "documentação institucional utilizando linguagem natural."
+    )
+
+    st.divider()
+
+    st.markdown("### Tecnologias")
+
+    st.markdown(
+        """
+        - 🐍 Python
+        - 🧠 Google Gemini
+        - 🔎 Gemini Embeddings
+        - 🗄️ FAISS
+        - 🔗 LangChain
+        - ⚡ Streamlit
+        """
+    )
+
+    st.divider()
+
+    st.caption("BioLab Research Center")
+    st.caption("RAG Assistant • Demo")
+
+# Main header
+st.title("🧪 LabAssistAI")
 
 st.subheader(
     "Assistente inteligente para laboratórios de pesquisa"
@@ -16,6 +57,26 @@ st.subheader(
 # Conversation history
 if "messages" not in st.session_state:
     st.session_state.messages = []
+
+# Welcome message
+if not st.session_state.messages:
+
+    st.markdown(
+        "### Como posso ajudar?"
+    )
+
+    st.write(
+        "Consulte a documentação do laboratório em linguagem natural. "
+        "Você pode perguntar sobre protocolos, equipamentos, estoque, "
+        "biossegurança e procedimentos administrativos."
+    )
+
+    st.info(
+        "💡 Exemplos: "
+        "Quem é o responsável pelo laboratório?  "
+        "Tenho no estoque todos os reagentes para extrair RNA?  "
+        "Quais são as configurações do termociclador para qPCR?"
+    )
 
 # Display previous messages
 for message in st.session_state.messages:
@@ -26,10 +87,12 @@ for message in st.session_state.messages:
 
         if message.get("sources"):
 
-            st.caption("Fontes consultadas:")
+            with st.expander(
+                f"📚 Fontes consultadas ({len(message['sources'])})"
+            ):
 
-            for source in message["sources"]:
-                st.caption(f"• {source}")
+                for source in message["sources"]:
+                    st.markdown(f"- `{source}`")
 
 # Chat input
 query = st.chat_input(
@@ -64,12 +127,12 @@ if query:
 
                 if sources:
 
-                    st.caption("Fontes consultadas:")
+                    with st.expander(
+                        f"📚 Fontes consultadas ({len(sources)})"
+                    ):
 
-                    for source in sources:
-                        st.caption(
-                            f"• {source}"
-                        )
+                        for source in sources:
+                            st.markdown(f"- `{source}`")
 
                 else:
 
