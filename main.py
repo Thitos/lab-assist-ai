@@ -1,6 +1,8 @@
 import streamlit as st
 
 from rag.pipeline import ask_question
+from get_knowledge_base import get_knowledge_base
+from config import CATEGORY_LABELS
 
 st.set_page_config(
     page_title="LabAssistAI",
@@ -10,6 +12,7 @@ st.set_page_config(
 )
 
 # Sidebar
+knowledge_base = get_knowledge_base()
 with st.sidebar:
 
     st.markdown("## 🧪 LabAssistAI")
@@ -26,6 +29,18 @@ with st.sidebar:
         "Consulte protocolos, equipamentos, estoque e "
         "documentação institucional utilizando linguagem natural."
     )
+
+    # Knowledge Base
+    st.markdown("### 📚 Base de conhecimento")
+
+    for category, documents in knowledge_base.items():
+        label = CATEGORY_LABELS[category]
+        with st.expander(f"{label} ({len(documents)})"):
+            for document in documents:
+                st.markdown(
+                    f"**{document['id']}**  \n"
+                    f"{document['title']}"
+                )
 
     st.divider()
 

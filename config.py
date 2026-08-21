@@ -11,6 +11,14 @@ LLM_MODEL = "gemini-3.5-flash"
 KNOWLEDGE_BASE_PATH = "knowledge_base"
 VECTOR_STORE_PATH = "vector_store"
 
+CATEGORY_LABELS = {
+    "01_onboarding": "Onboarding",
+    "02_biosafety": "Biossegurança",
+    "03_protocols": "Protocolos",
+    "04_equipment": "Equipamentos",
+    "05_administrative": "Administrativo",
+}
+
 CHUNK_SIZE = 2000
 CHUNK_OVERLAP = 300
 
