@@ -30,6 +30,8 @@ with st.sidebar:
         "documentação institucional utilizando linguagem natural."
     )
 
+    st.divider()
+
     # Knowledge Base
     st.markdown("### 📚 Base de conhecimento")
 
